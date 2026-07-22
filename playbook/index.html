@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Playbook para la transición del Sisbén al RUI"
+description: "Doce plays con recomendaciones operativas para que la implementación del Registro Universal de Ingresos incorpore garantías de derechos humanos."
+---
+<section class="pb-hero">
+  <div class="contenedor">
+    <p class="eyebrow">Playbook · Colombia · 2026</p>
+    <h1>Recomendaciones para la transición del Sisbén al RUI</h1>
+    <p class="intro">Una guía práctica para que las entidades responsables del Registro Universal de Ingresos implementen el nuevo sistema con garantías de transparencia, debido proceso, acceso, no discriminación y trato digno. Cada play traduce una reforma en acciones concretas, con sus herramientas listas para usar.</p>
+    <div class="pb-meta">
+      <div><strong>12</strong><span>plays operativos</span></div>
+      <div><strong>5</strong><span>etapas del sistema</span></div>
+      <div><strong>16</strong><span>herramientas prácticas</span></div>
+      <div><strong>18</strong><span>reformas de origen</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="contenedor">
+  <aside class="principio">
+    <h2>Principio transversal. Enfoque diferencial y revisión de sesgos</h2>
+    <p>Todos los plays deben implementarse con atención específica a las barreras que enfrentan las mujeres, las personas con discapacidad, los pueblos indígenas, las comunidades afrodescendientes, las personas mayores, las víctimas del conflicto armado y otras poblaciones históricamente excluidas. El enfoque diferencial no es un play separado. Es una condición de calidad y legitimidad de todas las medidas.</p>
+  </aside>
+
+  <section class="ruta" aria-label="Etapas del sistema">
+    <h2 class="ruta-titulo">La ruta del sistema</h2>
+    <ol class="ruta-pasos">
+      {% for e in site.data.etapas %}
+      <li class="ruta-paso" data-etapa="{{ e.id }}">
+        <button type="button" aria-pressed="false" title="Filtrar plays de la etapa {{ e.id }}">
+          <span class="num">Etapa {{ e.id }}</span>
+          <span class="nom">{{ e.nombre }}</span>
+        </button>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <div class="filtros">
+    <input type="search" id="buscador-plays" placeholder="Buscar en los plays (notificación, apelación, buena fe...)" aria-label="Buscar plays">
+    <button type="button" class="limpiar" id="limpiar-filtros">Quitar filtros</button>
+  </div>
+  <p class="contador-resultados" id="contador-plays" aria-live="polite"></p>
+
+  <div data-grid-plays>
+    {% assign plays_ordenados = site.plays | sort: "numero" %}
+    {% for e in site.data.etapas %}
+    <header class="encabezado-etapa" data-etapa="{{ e.id }}" id="etapa-{{ e.id }}">
+      <h2><span class="punto" aria-hidden="true"></span>Etapa {{ e.id }}. {{ e.nombre }}</h2>
+      <p>{{ e.descripcion }}</p>
+    </header>
+    <ul class="grid-plays">
+      {% for p in plays_ordenados %}
+      {% if p.etapa == e.id %}
+      <li class="card-play visible" data-etapa="{{ p.etapa }}">
+        <a href="{{ p.url | relative_url }}">
+          <span class="cp-num">Play {{ p.numero }}</span>
+          <h3>{{ p.title }}</h3>
+          <p class="cp-resumen">{{ p.resumen }}</p>
+          <span class="cp-pie">
+            <span class="chip chip-alcance alcance-{{ p.alcance }}">Reforma {{ p.reforma }} · {{ p.alcance }}</span>
+          </span>
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    {% endfor %}
+    <p class="sin-resultados" id="sin-resultados">Ningún play coincide con la búsqueda. Prueba con otras palabras o quita los filtros.</p>
+  </div>
+</div>

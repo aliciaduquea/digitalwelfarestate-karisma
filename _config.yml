@@ -1,0 +1,32 @@
+# Configuración del micrositio
+# Cambia "title" cuando definan el nombre final de la línea temática
+title: "Micrositio Karisma"
+description: "Protección social, datos y derechos"
+lang: es
+
+# IMPORTANTE para GitHub Pages:
+# Si el sitio se publica en https://USUARIO.github.io/NOMBRE-DEL-REPO/
+# baseurl debe ser "/NOMBRE-DEL-REPO". Si usan un dominio propio, déjenlo en "".
+baseurl: ""
+url: ""
+
+# Colección de plays del playbook
+collections:
+  plays:
+    output: true
+    permalink: /playbook/plays/:name/
+    sort_by: numero
+
+defaults:
+  - scope:
+      path: ""
+      type: plays
+    values:
+      layout: play
+
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

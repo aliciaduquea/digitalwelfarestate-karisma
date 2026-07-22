@@ -1,0 +1,25 @@
+- id: 1
+  slug: gobernanza
+  nombre: "Gobernanza y diseño institucional"
+  corta: "Gobernanza"
+  descripcion: "Las decisiones de organización institucional que determinan cómo opera el sistema y quiénes son responsables de cada función. El Decreto 875 de 2024 redistribuye funciones entre el DNP, las entidades territoriales y las entidades administradoras de la oferta social, pero no siempre con la claridad necesaria para que las personas sepan ante quién reclamar."
+- id: 2
+  slug: recoleccion
+  nombre: "Recolección de datos y registro"
+  corta: "Recolección"
+  descripcion: "Con el RUI se pasa de un modelo basado en encuestas presenciales a un esquema mixto de autodeclaración e integración de registros administrativos. La autodeclaración deberá realizarse al menos una vez al año, lo que plantea nuevas exigencias de acceso, simplicidad y adaptación a contextos diversos."
+- id: 3
+  slug: procesamiento
+  nombre: "Procesamiento e interoperabilidad"
+  corta: "Procesamiento"
+  descripcion: "El RUI intensifica el procesamiento automatizado al integrar la clasificación con registros administrativos de más de 30 entidades y un modelo de estimación de ingresos. Errores en una base de datos fuente pueden propagarse hasta la clasificación final sin que la persona lo sepa o pueda corregirlo a tiempo."
+- id: 4
+  slug: clasificacion
+  nombre: "Resultados y clasificación"
+  corta: "Clasificación"
+  descripcion: "La etapa con mayor impacto directo sobre las personas. Aquí se comunica (o no) la clasificación resultante, se explica (o no) cómo se llegó a ella y se formaliza (o no) la decisión de manera que pueda ser comprendida y cuestionada."
+- id: 5
+  slug: verificacion
+  nombre: "Verificación, apelación y actualización"
+  corta: "Verificación"
+  descripcion: "La etapa que mayores daños ha producido en la experiencia del Sisbén. La verificación sin garantías, la carga de la prueba invertida y la ausencia de mecanismos accesibles de reclamo han convertido errores técnicos en exclusiones prolongadas o definitivas."

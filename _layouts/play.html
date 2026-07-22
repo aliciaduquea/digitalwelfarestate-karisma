@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{% assign etapa = site.data.etapas | where: "id", page.etapa | first %}
+<article class="play etapa-{{ page.etapa }}">
+  <header class="play-hero">
+    <div class="contenedor estrecho">
+      <nav class="migas" aria-label="Ruta de navegación">
+        <a href="{{ '/playbook/' | relative_url }}">Playbook</a>
+        <span aria-hidden="true">/</span>
+        <a href="{{ '/playbook/' | relative_url }}#etapa-{{ page.etapa }}">Etapa {{ page.etapa }}. {{ etapa.corta }}</a>
+      </nav>
+      <p class="play-numero">Play {{ page.numero }}</p>
+      <h1 class="play-titulo">{{ page.title }}</h1>
+      <p class="play-resumen">{{ page.resumen }}</p>
+      <div class="chips">
+        <span class="chip chip-etapa">Etapa {{ page.etapa }} · {{ etapa.corta }}</span>
+        <span class="chip chip-alcance alcance-{{ page.alcance }}">Reforma {{ page.reforma }} · incorporación {{ page.alcance }}</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="contenedor estrecho cuerpo-play">
+    {{ content }}
+
+    {% assign hay_recursos = false %}
+    {% for r in site.data.recursos.items %}
+      {% if r.plays contains page.numero %}{% assign hay_recursos = true %}{% endif %}
+    {% endfor %}
+    {% if hay_recursos %}
+    <section class="play-recursos" aria-labelledby="recursos-titulo">
+      <h2 id="recursos-titulo">Herramientas de este play</h2>
+      <p class="nota-recursos">Estos instrumentos de la caja de herramientas traducen el play en acciones concretas.</p>
+      <ul class="lista-recursos">
+        {% for r in site.data.recursos.items %}
+        {% if r.plays contains page.numero %}
+        <li>
+          <a href="{{ '/playbook/recursos/' | relative_url }}#{{ r.id }}">
+            <span class="recurso-num">Recurso {{ r.numero }}</span>
+            <span class="recurso-titulo">{{ r.titulo }}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+  </div>
+
+  {% assign plays_ordenados = site.plays | sort: "numero" %}
+  <nav class="play-paginacion contenedor estrecho" aria-label="Navegación entre plays">
+    {% assign num_ant = page.numero | minus: 1 %}
+    {% assign num_sig = page.numero | plus: 1 %}
+    {% assign anterior = plays_ordenados | where: "numero", num_ant | first %}
+    {% assign siguiente = plays_ordenados | where: "numero", num_sig | first %}
+    {% if anterior %}
+    <a class="pag pag-ant" href="{{ anterior.url | relative_url }}">
+      <span class="pag-label">Anterior</span>
+      <span class="pag-titulo">Play {{ anterior.numero }}. {{ anterior.title }}</span>
+    </a>
+    {% else %}<span class="pag vacio"></span>{% endif %}
+    {% if siguiente %}
+    <a class="pag pag-sig" href="{{ siguiente.url | relative_url }}">
+      <span class="pag-label">Siguiente</span>
+      <span class="pag-titulo">Play {{ siguiente.numero }}. {{ siguiente.title }}</span>
+    </a>
+    {% else %}<span class="pag vacio"></span>{% endif %}
+  </nav>
+</article>
