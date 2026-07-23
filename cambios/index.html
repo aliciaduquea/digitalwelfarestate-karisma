@@ -1,0 +1,28 @@
+---
+layout: page
+title: "Qué ha cambiado"
+eyebrow: "Bitácora"
+entrada: "El registro de todo lo que se ha modificado en este sitio, con su fecha. Sirve para saber si algo que leyó antes sigue igual."
+permalink: /cambios/
+---
+
+<p>Cada página del sitio muestra su propia fecha de actualización y su número de versión. Acá queda el registro completo, de lo más reciente a lo más antiguo.</p>
+
+<ul class="bitacora">
+  {% assign entradas = site.data.bitacora | sort: "fecha" | reverse %}
+  {% for e in entradas %}
+  {% assign idx = e.fecha | date: "%-m" | minus: 1 %}
+  <li>
+    <span class="bit-fecha">{{ e.fecha | date: "%-d" }} de {{ site.data.meses[idx] }} de {{ e.fecha | date: "%Y" }}</span>
+    <div>
+      <span class="bit-titulo">{{ e.titulo }}</span>
+      {% if e.tipo %}<span class="bit-tipo"> · {{ e.tipo }}</span>{% endif %}
+      {% if e.detalle %}<p style="margin:0.3rem 0 0;font-size:0.95rem;">{{ e.detalle }}</p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+
+<div class="aviso">
+  <p><strong>Cómo agregar una entrada.</strong> Editen el archivo <code>_data/bitacora.yml</code> y agreguen un bloque nuevo arriba de los demás, con la fecha, un título y una descripción corta. No hay que tocar nada más.</p>
+</div>

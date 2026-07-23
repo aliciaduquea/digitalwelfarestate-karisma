@@ -1,0 +1,15 @@
+- id: s1
+  nombre: "Entender quién responde por qué"
+  descripcion: "Herramientas para reconstruir el recorrido de una persona por el sistema, identificar qué entidad responde en cada paso y detectar los vacíos donde nadie responde."
+- id: s2
+  nombre: "Comunicar sin generar sospecha"
+  descripcion: "Instrumentos para avisar los cambios con anticipación y para revisar que los mensajes del sistema no traten a las personas como sospechosas."
+- id: s3
+  nombre: "Atender sin trasladar cargas"
+  descripcion: "Formatos para que las solicitudes tengan seguimiento verificable y para evaluar si los canales de atención llegan a todo el territorio."
+- id: s4
+  nombre: "Usar datos con cuidado"
+  descripcion: "Instrumentos para decidir si una base de datos debe usarse, documentar qué información alimentó cada clasificación y mapear todas las fuentes del sistema."
+- id: s5
+  nombre: "Explicar y resolver"
+  descripcion: "Plantillas para informar resultados en lenguaje claro y un protocolo completo para resolver inconsistencias sin castigar a la persona."

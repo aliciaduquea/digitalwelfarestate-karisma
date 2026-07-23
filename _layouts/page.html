@@ -5,7 +5,8 @@ layout: default
   <div class="contenedor estrecho">
     {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
     <h1 class="titulo-pagina">{{ page.title }}</h1>
-    {% if page.intro %}<p class="intro">{{ page.intro }}</p>{% endif %}
+    {% if page.entrada %}<p class="entrada">{{ page.entrada }}</p>{% endif %}
+    {% if page.actualizado %}{% include actualizado.html fecha=page.actualizado version=page.version %}{% endif %}
   </div>
   <div class="contenedor {% unless page.ancho %}estrecho{% endunless %} cuerpo-pagina">
     {{ content }}

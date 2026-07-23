@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{% assign etapa = site.data.etapas | where: "id", page.etapa | first %}
+<article class="medida etapa-{{ page.etapa }}">
+  <header class="medida-hero">
+    <div class="contenedor estrecho">
+      <nav class="migas" aria-label="Ruta de navegación">
+        <a href="{{ '/que-deberia-cambiar/' | relative_url }}">Qué debería cambiar</a>
+        <span aria-hidden="true">/</span>
+        <a href="{{ '/que-deberia-cambiar/' | relative_url }}#etapa-{{ page.etapa }}">Etapa {{ page.etapa }}. {{ etapa.corta }}</a>
+      </nav>
+      <p class="medida-numero">Medida {{ page.numero }} de 12</p>
+      <h1 class="medida-titulo">{{ page.title }}</h1>
+      <p class="medida-resumen">{{ page.resumen }}</p>
+      <div class="chips">
+        <span class="chip">Etapa {{ page.etapa }} · {{ etapa.corta }}</span>
+        {% for e in page.entidades %}
+          {% assign ent = site.data.entidades | where: "id", e | first %}
+          <span class="chip">{{ ent.nombre }}</span>
+        {% endfor %}
+      </div>
+      {% include actualizado.html fecha=page.actualizado version=page.version %}
+    </div>
+  </header>
+
+  <div class="contenedor estrecho cuerpo-medida">
+    {{ content }}
+
+    {% assign hay = false %}
+    {% for h in site.herramientas %}{% if h.medidas contains page.numero %}{% assign hay = true %}{% endif %}{% endfor %}
+    {% if hay %}
+    <section class="medida-herramientas">
+      <h2>Con qué hacerlo</h2>
+      <ul class="lista-herramientas">
+        {% assign hs = site.herramientas | sort: "orden" %}
+        {% for h in hs %}
+        {% if h.medidas contains page.numero %}
+        <li>
+          <a href="{{ h.url | relative_url }}">
+            <span class="lh-num">Herramienta {{ h.numero }}</span>
+            <span class="lh-titulo">{{ h.title }}</span>
+            <span class="lh-tipo">{{ h.tipo }}</span>
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    <p class="origen-medida">Esta medida viene del <a href="{{ '/que-deberia-cambiar/propuestas/' | relative_url }}">cambio propuesto número {{ page.reforma }}</a>, que el sistema puede incorporar de forma {{ page.alcance }}.</p>
+  </div>
+
+  {% assign todas = site.medidas | sort: "numero" %}
+  {% assign num_ant = page.numero | minus: 1 %}
+  {% assign num_sig = page.numero | plus: 1 %}
+  {% assign anterior = todas | where: "numero", num_ant | first %}
+  {% assign siguiente = todas | where: "numero", num_sig | first %}
+  <nav class="paginacion contenedor estrecho" aria-label="Navegación entre medidas">
+    {% if anterior %}
+    <a class="pag pag-ant" href="{{ anterior.url | relative_url }}"><span class="pag-label">Anterior</span><span class="pag-titulo">{{ anterior.title }}</span></a>
+    {% else %}<span class="pag vacio"></span>{% endif %}
+    {% if siguiente %}
+    <a class="pag pag-sig" href="{{ siguiente.url | relative_url }}"><span class="pag-label">Siguiente</span><span class="pag-titulo">{{ siguiente.title }}</span></a>
+    {% else %}<span class="pag vacio"></span>{% endif %}
+  </nav>
+</article>

@@ -1,0 +1,7 @@
+# Bitácora de cambios del sitio.
+# Agregue una entrada nueva ARRIBA cada vez que publiquen un cambio.
+# fecha en formato AAAA-MM-DD.
+- fecha: 2026-07-23
+  titulo: "Primera publicación del sitio"
+  tipo: "Publicación inicial"
+  detalle: "Se publican las doce medidas para la transición al RUI, las diecisiete herramientas, la explicación del sistema y las seis investigaciones de Karisma sobre el Sisbén."

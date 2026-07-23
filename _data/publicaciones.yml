@@ -1,0 +1,44 @@
+# Investigaciones publicadas por Karisma sobre el Sisbén y la protección social.
+# Verifiquen los enlaces antes de publicar el sitio.
+- titulo: "Experimentando con la pobreza"
+  subtitulo: "El Sisbén y los proyectos de analítica de datos en Colombia"
+  anio: 2020
+  autoria: "Joan López. Coordinación de Juan Diego Castañeda."
+  resumen: "La primera investigación que miró el Sisbén como lo que es, un sistema que perfila personas con datos. Documenta cómo la cuarta versión pasó de medir condiciones de vida a predecir cuánto puede ganar alguien, y cuenta dos casos incómodos: el acuerdo con la dueña de Datacrédito para cruzar información financiera de personas empobrecidas, y el contrato que entregó la base de datos del Sisbén a una empresa privada para entrenar modelos de detección de fraude."
+  hallazgo: "El sistema dejó de buscar personas pobres y empezó a buscar mentirosos."
+  enlace: "https://web.karisma.org.co/wp-content/uploads/download-manager-files/Experimentando%20con%20la%20pobreza.pdf"
+- titulo: "Vigilando a las \"buenas madres\""
+  subtitulo: "Datificación y vigilancia en la política social desde Familias en Acción"
+  anio: 2021
+  autoria: "Laura Castro y Joan López. Coordinación de Juan Diego Castañeda."
+  resumen: "Qué pasa cuando el mismo sistema mira a las mujeres. Familias en Acción entrega el dinero a las madres y a cambio les exige demostrar que son buenas madres. Ellas cargan con las condicionalidades, con el tiempo de cumplirlas y con arreglar los errores que comete el Estado. Con datos del DNP, el informe muestra que más mujeres quedan marcadas en verificación porque su cónyuge o su hijo empezó a cotizar."
+  hallazgo: "La vigilancia no cae igual sobre todos. Cae sobre quien ya carga con el cuidado."
+  enlace: "https://blog.karisma.org.co/wp-content/uploads/2021/03/Vigilando_a_las_buenas_madres_Informe_Karisma-1.pdf"
+- titulo: "El Sisbén IV, ciudadanía y redes sociales"
+  subtitulo: "Confusión, información y tácticas de conocimiento"
+  anio: 2021
+  autoria: "Oscar Javier Maldonado y Lina Daniela Gómez, con DISORLAB de la Universidad del Rosario."
+  resumen: "Qué entiende la gente sobre el sistema que la clasifica. Rastrea en redes sociales cómo circula la información sobre el Sisbén, qué dudas aparecen una y otra vez y qué tácticas usan las personas para descifrar un sistema que no les explica sus reglas."
+  hallazgo: "Cuando el sistema no explica, la gente llena el vacío como puede."
+  enlace: "https://web.karisma.org.co/wp-content/uploads/2022/04/Informe-Sisben-IV-ciudadania-y-rrss.pdf"
+- titulo: "Datos y dignidad"
+  subtitulo: "Guía para el uso justo de datos en la protección social desde el caso del Sisbén"
+  anio: 2022
+  autoria: "Joan López."
+  resumen: "El paso de documentar el problema a proponer criterios. Reúne lo aprendido sobre el Sisbén en una guía sobre qué significa usar datos de forma justa cuando de esos datos depende el acceso a derechos."
+  hallazgo: "Usar datos con justicia no es un asunto técnico, es una decisión política."
+  enlace: "https://blog.karisma.org.co/wp-content/uploads/2022/03/informe-datos-y-dignidad.pdf"
+- titulo: "Recomendaciones de derechos humanos para la regulación de los sistemas de clasificación social"
+  subtitulo: "Propuestas para el uso de datos en la protección social en Colombia"
+  anio: 2023
+  autoria: "Joan López."
+  resumen: "La agenda de cambios que orienta todo el trabajo posterior. Traduce años de hallazgos en propuestas concretas de regulación sobre transparencia, debido proceso, corrección de errores y no discriminación."
+  hallazgo: "De aquí salen los dieciocho cambios que estructuran la guía de esta página."
+  enlace: "https://doi.org/10.13140/RG.2.2.34531.26408"
+- titulo: "Comentarios al proyecto de decreto sobre el Registro Universal de Ingresos"
+  subtitulo: "Una oportunidad para mejorar el sistema de clasificación social en Colombia"
+  anio: 2024
+  autoria: "Fundación Karisma."
+  resumen: "La intervención formal ante el Gobierno cuando se estaba redactando la norma del RUI. Señala los vacíos del proyecto de decreto, entre ellos que no define qué pasa cuando la autodeclaración no coincide con los registros administrativos, y pide que la carga de la prueba recaiga sobre el Estado."
+  hallazgo: "Varias de las alertas de este documento siguen sin resolverse en la norma vigente."
+  enlace: "https://web.karisma.org.co/registro-universal-de-ingresos-una-oportunidad-para-mejorar-el-sistema-de-clasificacion-social-en-colombia/"

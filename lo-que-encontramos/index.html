@@ -1,0 +1,62 @@
+---
+layout: default
+title: "Lo que encontramos"
+permalink: /lo-que-encontramos/
+description: "Seis investigaciones sobre el Sisbén, casos documentados y el trabajo comparado en América Latina."
+actualizado: 2026-07-23
+version: "1.0"
+---
+<section class="seccion-hero">
+  <div class="contenedor estrecho">
+    <p class="eyebrow">La evidencia</p>
+    <h1>Lo que encontramos</h1>
+    <p class="entrada">Llevamos desde 2020 mirando de cerca cómo funciona este sistema, quién queda por fuera y por qué. Acá está todo ese trabajo, de lo más reciente a lo más antiguo, con un resumen de qué encontró cada investigación.</p>
+    {% include actualizado.html fecha=page.actualizado version=page.version %}
+  </div>
+</section>
+
+<div class="contenedor estrecho">
+  <h2 class="etiqueta-negra" style="margin-top:1.5rem;">Investigaciones publicadas</h2>
+  <ul class="lista-publicaciones">
+    {% assign pubs = site.data.publicaciones | sort: "anio" | reverse %}
+    {% for p in pubs %}
+    <li class="publicacion">
+      <span class="pub-anio">{{ p.anio }}</span>
+      <div>
+        <h3>{{ p.titulo }}</h3>
+        <p class="pub-subtitulo">{{ p.subtitulo }}</p>
+        <p class="pub-resumen">{{ p.resumen }}</p>
+        <p class="pub-hallazgo">{{ p.hallazgo }}</p>
+        <p class="pub-pie">
+          <span>{{ p.autoria }}</span>
+          <a class="pub-enlace" href="{{ p.enlace }}">Leer el documento</a>
+        </p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="etiqueta-negra">Casos concretos</h2>
+  <p>Las investigaciones explican los patrones. Los casos muestran a quién le pasó. Estamos armando un registro de situaciones concretas en las que alguien quedó excluido, mal clasificado o sin explicación, con la misma estructura en todos los países para poder compararlas.</p>
+  <p><a class="enlace-flecha" href="{{ '/casos/' | relative_url }}">Ver cómo funciona el registro de casos</a></p>
+
+  <h2 class="etiqueta-negra">Qué pasa en el resto de la región</h2>
+  <p>Colombia no es un caso aislado. Perú, Brasil, Uruguay, México y otros países usan sistemas parecidos para decidir quién accede a la protección social. Con organizaciones de esos países estamos construyendo evidencia que se pueda poner lado a lado, con las mismas preguntas y el mismo nivel de detalle, para mostrar qué se repite y qué es propio de cada lugar.</p>
+
+  <ul class="grid-productos">
+    <li class="producto pendiente">
+      <span class="prod-etiqueta">En preparación</span>
+      <h3>Informes por país</h3>
+      <p>Qué sistema opera en cada país, cómo decide, qué partes son opacas, qué tan real es el aviso y la apelación en la práctica, y qué daños aparecen.</p>
+    </li>
+    <li class="producto pendiente">
+      <span class="prod-etiqueta">En preparación</span>
+      <h3>Análisis comparativo</h3>
+      <p>Los patrones que se repiten entre países y la lista de salvaguardas mínimas que deberían exigirse en cualquier discusión regional sobre estos sistemas.</p>
+    </li>
+  </ul>
+
+  <div class="aviso">
+    <p>Si su organización trabaja estos temas en otro país de la región y quiere sumarse, <a href="{{ '/sobre/' | relative_url }}">escríbanos</a>.</p>
+  </div>
+</div>

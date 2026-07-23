@@ -1,0 +1,16 @@
+- id: dnp
+  nombre: "DNP"
+  completo: "Departamento Nacional de Planeación"
+  descripcion: "Define las reglas del sistema, la metodología, los cruces de datos y los lineamientos que siguen las demás entidades."
+- id: territoriales
+  nombre: "Entidades territoriales"
+  completo: "Municipios, distritos y gobernaciones"
+  descripcion: "Atienden directamente a las personas, reciben solicitudes de actualización y corrección, y operan los canales locales."
+- id: programas
+  nombre: "Programas sociales"
+  completo: "Entidades que administran programas sociales"
+  descripcion: "Usan la clasificación para decidir quién entra, permanece o sale de cada programa."
+- id: registros
+  nombre: "Entidades con registros"
+  completo: "Entidades administradoras de registros administrativos"
+  descripcion: "Producen y mantienen las bases de datos que alimentan la estimación de ingresos del sistema."

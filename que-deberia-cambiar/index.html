@@ -1,0 +1,94 @@
+---
+layout: default
+title: "Qué debería cambiar"
+permalink: /que-deberia-cambiar/
+description: "Doce medidas que las entidades pueden aplicar durante el cambio al Registro Universal de Ingresos."
+actualizado: 2026-07-23
+version: "1.0"
+---
+<section class="seccion-hero">
+  <div class="contenedor estrecho">
+    <p class="eyebrow">Las propuestas</p>
+    <h1>Qué debería cambiar</h1>
+    <p class="entrada">Doce medidas concretas para que el paso al nuevo sistema no repita los problemas del anterior. No son ideas generales. Cada una se puede aplicar dentro de las competencias que las entidades ya tienen, y cada una viene con las herramientas para hacerlo.</p>
+    {% include actualizado.html fecha=page.actualizado version=page.version %}
+  </div>
+</section>
+
+<div class="contenedor estrecho">
+  <div class="aviso">
+    <p><strong>Antes de empezar.</strong> Las doce medidas hay que aplicarlas mirando a quién le cuesta más llegar. Mujeres con responsabilidades de cuidado, personas con discapacidad, pueblos indígenas, comunidades afrodescendientes, personas mayores, gente en zonas rurales sin conectividad, víctimas del conflicto. Esto no es una medida aparte que se cumple al final. Es la condición para que las otras once sirvan de algo.</p>
+  </div>
+  <p>Puede recorrerlas de dos maneras. Siguiendo el orden del sistema, de la primera decisión hasta el último reclamo, o filtrando por la entidad a la que le corresponde aplicarlas.</p>
+  <p><a class="enlace-flecha" href="{{ '/que-deberia-cambiar/herramientas/' | relative_url }}">Ir directo a las diecisiete herramientas</a></p>
+</div>
+
+<div class="contenedor">
+  <section class="filtros-bloque" aria-label="Filtrar medidas">
+    <div class="filtro-grupo">
+      <h2 class="filtro-titulo">Por etapa del sistema</h2>
+      <ol class="ruta-pasos">
+        {% for e in site.data.etapas %}
+        <li class="ruta-paso" data-etapa="{{ e.id }}">
+          <button type="button" aria-pressed="false">
+            <span class="num">Etapa {{ e.id }}</span>
+            <span class="nom">{{ e.nombre }}</span>
+          </button>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+
+    <div class="filtro-grupo">
+      <h2 class="filtro-titulo">Por entidad responsable</h2>
+      <div class="filtros-entidad" role="group">
+        {% for ent in site.data.entidades %}
+        <button type="button" data-entidad="{{ ent.id }}" aria-pressed="false" title="{{ ent.completo }}">{{ ent.nombre }}</button>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="filtros">
+      <input type="search" id="buscador-medidas" placeholder="Buscar una palabra: aviso, apelación, buena fe..." aria-label="Buscar medidas">
+      <button type="button" class="limpiar" id="limpiar-filtros">Quitar filtros</button>
+    </div>
+    <p class="contador-resultados" id="contador-medidas" aria-live="polite"></p>
+  </section>
+
+  <div data-grid-medidas>
+    {% assign todas = site.medidas | sort: "numero" %}
+    {% for e in site.data.etapas %}
+    <header class="encabezado-etapa" data-etapa="{{ e.id }}" id="etapa-{{ e.id }}">
+      <h2><span class="punto" aria-hidden="true"></span>Etapa {{ e.id }}. {{ e.nombre }}</h2>
+      <p>{{ e.descripcion }}</p>
+    </header>
+    <ul class="grid-medidas">
+      {% for m in todas %}
+      {% if m.etapa == e.id %}
+      <li class="card-medida visible" data-etapa="{{ m.etapa }}" data-entidades="{{ m.entidades | join: ' ' }}">
+        <a href="{{ m.url | relative_url }}">
+          <span class="cm-num">Medida {{ m.numero }}</span>
+          <h3>{{ m.title }}</h3>
+          <p class="cm-resumen">{{ m.resumen }}</p>
+          <span class="cm-pie">
+            {% for id in m.entidades %}
+              {% assign ent = site.data.entidades | where: "id", id | first %}
+              <span class="chip chip-mini">{{ ent.nombre }}</span>
+            {% endfor %}
+          </span>
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+    {% endfor %}
+    <p class="sin-resultados" id="sin-resultados">Ninguna medida coincide con eso. Pruebe con otra palabra o quite los filtros.</p>
+  </div>
+
+  <div class="contenedor estrecho" style="padding-left:0;padding-right:0;">
+    <div class="aviso">
+      <p><strong>¿De dónde salen estas doce medidas?</strong> De dieciocho cambios que identificamos investigando el Sisbén. Ocho se pueden aplicar ya, cinco solo en parte y cinco necesitan decisiones que exceden a quien opera el sistema.</p>
+      <p><a class="enlace-flecha" href="{{ '/que-deberia-cambiar/propuestas/' | relative_url }}">Ver los dieciocho cambios</a></p>
+    </div>
+  </div>
+</div>

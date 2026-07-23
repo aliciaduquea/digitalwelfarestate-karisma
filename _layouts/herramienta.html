@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<article class="herramienta">
+  <header class="herramienta-hero">
+    <div class="contenedor estrecho">
+      <nav class="migas" aria-label="Ruta de navegación">
+        <a href="{{ '/que-deberia-cambiar/' | relative_url }}">Qué debería cambiar</a>
+        <span aria-hidden="true">/</span>
+        <a href="{{ '/que-deberia-cambiar/herramientas/' | relative_url }}">Herramientas</a>
+      </nav>
+      <p class="herramienta-numero">Herramienta {{ page.numero }} · {{ page.tipo }}</p>
+      <h1 class="herramienta-titulo">{{ page.title }}</h1>
+      <p class="herramienta-resumen">{{ page.resumen }}</p>
+      {% assign ms = site.medidas | sort: "numero" %}
+      <div class="chips">
+        {% for n in page.medidas %}
+          {% for m in ms %}{% if m.numero == n %}
+          <a class="chip chip-enlace" href="{{ m.url | relative_url }}">Medida {{ m.numero }}. {{ m.title }}</a>
+          {% endif %}{% endfor %}
+        {% endfor %}
+      </div>
+      {% include actualizado.html fecha=page.actualizado version=page.version %}
+    </div>
+  </header>
+
+  <div class="contenedor cuerpo-herramienta">
+    {{ content }}
+  </div>
+
+  {% assign todas = site.herramientas | sort: "orden" %}
+  {% assign o_ant = page.orden | minus: 1 %}
+  {% assign o_sig = page.orden | plus: 1 %}
+  {% assign anterior = todas | where: "orden", o_ant | first %}
+  {% assign siguiente = todas | where: "orden", o_sig | first %}
+  <nav class="paginacion contenedor estrecho" aria-label="Navegación entre herramientas">
+    {% if anterior %}
+    <a class="pag pag-ant" href="{{ anterior.url | relative_url }}"><span class="pag-label">Anterior</span><span class="pag-titulo">{{ anterior.title }}</span></a>
+    {% else %}<span class="pag vacio"></span>{% endif %}
+    {% if siguiente %}
+    <a class="pag pag-sig" href="{{ siguiente.url | relative_url }}"><span class="pag-label">Siguiente</span><span class="pag-titulo">{{ siguiente.title }}</span></a>
+    {% else %}<span class="pag vacio"></span>{% endif %}
+  </nav>
+</article>

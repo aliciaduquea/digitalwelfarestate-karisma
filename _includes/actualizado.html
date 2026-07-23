@@ -1,0 +1,10 @@
+{%- comment -%}
+Muestra la fecha de última actualización en español.
+Uso: {% include actualizado.html fecha=page.actualizado version=page.version %}
+{%- endcomment -%}
+{%- assign idx = include.fecha | date: "%-m" | minus: 1 -%}
+{%- assign mes = site.data.meses[idx] -%}
+<p class="actualizado">
+  <span class="act-punto" aria-hidden="true"></span>
+  Última actualización: {{ include.fecha | date: "%-d" }} de {{ mes }} de {{ include.fecha | date: "%Y" }}{% if include.version %} · versión {{ include.version }}{% endif %}
+</p>

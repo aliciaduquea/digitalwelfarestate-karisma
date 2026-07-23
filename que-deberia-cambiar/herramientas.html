@@ -1,0 +1,48 @@
+---
+layout: default
+title: "Herramientas"
+permalink: /que-deberia-cambiar/herramientas/
+description: "Diecisiete matrices, listas de verificación, formatos y plantillas listas para usar."
+actualizado: 2026-07-23
+version: "1.0"
+---
+<section class="seccion-hero">
+  <div class="contenedor estrecho">
+    <nav class="migas"><a href="{{ '/que-deberia-cambiar/' | relative_url }}">Qué debería cambiar</a></nav>
+    <p class="eyebrow">Para trabajar</p>
+    <h1>Diecisiete herramientas</h1>
+    <p class="entrada">Matrices, listas de verificación, formatos y plantillas. Están completas y listas para diligenciar, adaptar o llevar a una reunión de trabajo. Puede usar una sola o el conjunto.</p>
+    {% include actualizado.html fecha=page.actualizado version=page.version %}
+  </div>
+</section>
+
+<div class="contenedor">
+  {% assign hs = site.herramientas | sort: "orden" %}
+  {% assign ms = site.medidas | sort: "numero" %}
+  {% for s in site.data.secciones_herramientas %}
+  <section class="bloque-herramientas">
+    <header class="cab-bloque">
+      <h2>{{ s.nombre }}</h2>
+      <p>{{ s.descripcion }}</p>
+    </header>
+    <ul class="grid-herramientas">
+      {% for h in hs %}
+      {% if h.seccion == s.id %}
+      <li class="card-herramienta">
+        <a href="{{ h.url | relative_url }}">
+          <span class="ch-cab"><span class="ch-num">{{ h.numero }}</span><span class="ch-tipo">{{ h.tipo }}</span></span>
+          <h3>{{ h.title }}</h3>
+          <p class="ch-resumen">{{ h.resumen }}</p>
+          <span class="ch-pie">
+            {% for n in h.medidas %}
+              {% for m in ms %}{% if m.numero == n %}<span class="chip chip-mini">Medida {{ m.numero }}</span>{% endif %}{% endfor %}
+            {% endfor %}
+          </span>
+        </a>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
