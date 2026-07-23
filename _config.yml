@@ -6,7 +6,7 @@ lang: es
 # IMPORTANTE para GitHub Pages:
 # Si el sitio se publica en https://USUARIO.github.io/NOMBRE-DEL-REPO/
 # baseurl debe ser "/NOMBRE-DEL-REPO". Si usan un dominio propio, déjenlo en "".
-baseurl: ""
+baseurl: "/digitalwelfarestate-karisma"
 url: ""
 
 collections:
