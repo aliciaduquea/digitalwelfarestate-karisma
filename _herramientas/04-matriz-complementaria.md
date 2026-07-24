@@ -17,15 +17,86 @@ Para facilitar su lectura, se marca con una casilla llena cuando una actividad f
 <div class="tabla-scroll">
 <table class="tabla-h">
 <thead>
-<tr><th>Institución</th><th>Diseña</th><th>Implementa</th><th>Administra datos</th><th>Verifica información</th><th>Clasifica</th><th>Usa la clasificación</th><th>Atiende ciudadanía</th></tr>
+<tr>
+<th>Institución</th>
+<th>Diseña</th>
+<th>Implementa</th>
+<th>Administra datos</th>
+<th>Verifica información</th>
+<th>Clasifica</th>
+<th>Usa la clasificación</th>
+<th>Atiende ciudadanía</th>
+</tr>
 </thead>
+
 <tbody>
-<tr><th scope="row">DNP</th><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td></tr>
-<tr><th scope="row">Entidades con registros administrativos</th><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td></tr>
-<tr><th scope="row">Municipios</th><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td></tr>
-<tr><th scope="row">Departamentos</th><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td></tr>
-<tr><th scope="row">Programas sociales</th><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td></tr>
-<tr><th scope="row">Ciudadanía</th><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td><td class="marca"><span class="casilla"></span></td></tr>
+
+<tr>
+<th scope="row">DNP</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th scope="row">Registros administrativos</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th scope="row">Municipios</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th scope="row">Departamentos</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th scope="row">Programas sociales</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th scope="row">Ciudadanía</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
 </tbody>
 </table>
 </div>
