@@ -530,3 +530,13 @@ img { max-width: 100%; height: auto; }
   .ruta-paso:last-child { grid-column: auto; }
   .tabla-lenguaje td { display: block; width: 100%; }
 }
+
+/* Evita conflicto entre la clase .marca del encabezado y las tablas */
+.tabla-h td.marca,
+.tabla-h th.marca {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 3rem;
+}
+
