@@ -30,6 +30,7 @@ Este mapa permite reconstruir el recorrido de una persona a través de las disti
 <tr><th scope="row">8. Actualización de información</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><th scope="row">9. Corrección de errores</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><th scope="row">10. Reclamación o apelación</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><th scope="row">11. Otras etapas relevantes</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
