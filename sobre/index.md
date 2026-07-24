@@ -30,9 +30,7 @@ La idea es sencilla de decir y difícil de hacer. Un sistema en Perú y otro en 
 
 Si encuentra un error, si trabaja en una entidad pública y quiere comentar alguna de las propuestas, si tiene un caso que documentar o si su organización trabaja estos temas en otro país, escríbanos.
 
-<div class="aviso">
-  <p><strong>Pendiente.</strong> Falta agregar acá el correo de contacto y los enlaces a las redes de Karisma.</p>
-</div>
+Puede escribirnos a <a href="mailto:contacto@karisma.org.co">contacto@karisma.org.co</a>.
 
 ## Licencia
 
